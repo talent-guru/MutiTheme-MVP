@@ -1,8 +1,6 @@
 import Image from "next/image"
 
-import { LocalizedLink } from "@/components/LocalizedLink"
-import { Button } from "@/components/Button"
-import { Input } from "@/components/Forms"
+import { LocalizedLink, Button, Input } from "@/components/ThemeComponents"
 
 export default async function LoginLoadingPage() {
   return (

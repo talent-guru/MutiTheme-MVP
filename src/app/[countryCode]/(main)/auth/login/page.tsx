@@ -3,8 +3,8 @@ import Image from "next/image"
 import { redirect } from "next/navigation"
 
 import { getCustomer } from "@lib/data/customer"
-import { LoginForm } from "@modules/auth/components/LoginForm"
-import { LocalizedLink } from "@/components/LocalizedLink"
+import { LoginForm } from "@modules/ThemeModules"
+import { LocalizedLink } from "@/components/ThemeComponents"
 
 export const metadata: Metadata = {
   title: "Login",

@@ -3,8 +3,7 @@ module.exports = {
   content: [
     "./src/app/**/*.{js,ts,jsx,tsx}",
     "./src/pages/**/*.{js,ts,jsx,tsx}",
-    "./src/components/**/*.{js,ts,jsx,tsx}",
-    "./src/modules/**/*.{js,ts,jsx,tsx}",
+    "./src/themes/**/*.{js,ts,jsx,tsx}",
     "./node_modules/@medusajs/ui/dist/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
@@ -57,6 +56,8 @@ module.exports = {
         DEFAULT: "rgba(161, 161, 170, 1)",
         dark: "rgba(113, 113, 122, 1)",
       },
+      primary: "var(--color-primary)",
+      bg: "var(--color-bg)",
     },
     fontSize: {
       "3xl": ["3.5rem", 1.4],

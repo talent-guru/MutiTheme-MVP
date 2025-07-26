@@ -1,0 +1,146 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.theme-modern {
+  --color-primary: #FF5227;
+  --color-bg: #ff52273c;
+  --font-family: "Instrument Serif","Instrument Serif Fallback";
+}
+ 
+.theme-modern html {
+  @apply text-black font-normal;
+}
+
+.theme-modern h1,
+.theme-modern h2,
+.theme-modern h3,
+.theme-modern h4,
+.theme-modern h5,
+.theme-modern h6 {
+  @apply font-medium;
+}
+
+/* Chrome, Safari and Opera */
+.theme-modern .no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.theme-modern .no-scrollbar::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.theme-modern .no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.theme-modern .content-container {
+  @apply max-w-[1440px] w-full mx-auto px-6;
+}
+
+.theme-modern .contrast-btn {
+  @apply px-4 py-2 border border-black rounded-full hover:bg-black hover:text-white transition-colors duration-200 ease-in;
+}
+
+.theme-modern .text-xsmall-regular {
+  @apply text-[10px] leading-4 font-normal;
+}
+
+.theme-modern .text-small-regular {
+  @apply text-xs leading-5 font-normal;
+}
+
+.theme-modern .text-small-semi {
+  @apply text-xs leading-5 font-semibold;
+}
+
+.theme-modern .text-base-regular {
+  @apply text-sm leading-6 font-normal;
+}
+
+.theme-modern .text-base-semi {
+  @apply text-sm leading-6 font-semibold;
+}
+
+.theme-modern .text-large-regular {
+  @apply text-base leading-6 font-normal;
+}
+
+.theme-modern .text-large-semi {
+  @apply text-base leading-6 font-semibold;
+}
+
+.theme-modern .text-xl-regular {
+  @apply text-2xl leading-[36px] font-normal;
+}
+
+.theme-modern .text-xl-semi {
+  @apply text-2xl leading-[36px] font-semibold;
+}
+
+.theme-modern .text-2xl-regular {
+  @apply text-[30px] leading-[48px] font-normal;
+}
+
+.theme-modern .text-2xl-semi {
+  @apply text-[30px] leading-[48px] font-semibold;
+}
+
+.theme-modern .text-3xl-regular {
+  @apply text-[32px] leading-[44px] font-normal;
+}
+
+.theme-modern .text-3xl-semi {
+  @apply text-[32px] leading-[44px] font-semibold;
+}
+
+.theme-modern .article h1 {
+  @apply text-2xl;
+}
+
+.theme-modern .article h2,
+.theme-modern .article h3,
+.theme-modern .article h4,
+.theme-modern .article h5,
+.theme-modern .article h6 {
+  @apply text-md mt-16 mb-8;
+}
+
+.theme-modern .article p,
+.theme-modern .article ul {
+  @apply mb-4;
+}
+
+.theme-modern .article ul,
+.theme-modern .article ol {
+  @apply pl-5;
+}
+
+.theme-modern .article ul {
+  @apply list-disc;
+}
+
+.theme-modern .article ol {
+  @apply list-decimal;
+}
+
+.theme-modern .article ol ul {
+  @apply mt-4 pl-0;
+}
+
+.theme-modern .article ol > li {
+  @apply pl-1;
+}
+
+.theme-modern .article ol > li + li {
+  @apply mt-5;
+}
+
+.theme-modern .txt-medium {
+  @apply text-[1.875rem] leading-[1.3125rem] font-normal font-inter;
+}
+
+.theme-modern .txt-xlarge-plus {
+  @apply text-[1.125rem] leading-[1.6875rem] font-medium font-inter;
+}

@@ -1,6 +1,6 @@
 import { Metadata } from "next"
 import { StoreRegion } from "@medusajs/types"
-import { Layout, LayoutColumn } from "@/components/Layout"
+import { Layout, LayoutColumn } from "@/components/ThemeComponents"
 import { listRegions } from "@lib/data/regions"
 
 export const metadata: Metadata = {

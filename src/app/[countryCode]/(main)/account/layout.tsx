@@ -1,7 +1,6 @@
 import * as React from "react"
 
-import { SignOutButton } from "@modules/account/components/SignOutButton"
-import { SidebarNav } from "@modules/account/components/SidebarNav"
+import { SignOutButton, SidebarNav } from "@modules/ThemeModules"
 
 export default function AccountLayout(props: { children: React.ReactNode }) {
   return (

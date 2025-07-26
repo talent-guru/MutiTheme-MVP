@@ -7,7 +7,7 @@ import {
   getProductByHandle,
   getProductFashionDataByHandle,
 } from "@lib/data/products"
-import ProductTemplate from "@modules/products/templates"
+import { ProductTemplate } from "@modules/ThemeModules"
 
 type Props = {
   params: Promise<{ countryCode: string; handle: string }>

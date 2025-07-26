@@ -1,7 +1,8 @@
 import { getProductsListWithSort } from "@lib/data/products"
 import { HttpTypes } from "@medusajs/types"
-import { SortOptions } from "@modules/store/components/refinement-list/sort-products"
 import { useInfiniteQuery } from "@tanstack/react-query"
+
+export type SortOptions = "price_asc" | "price_desc" | "created_at";
 
 export const useStoreProducts = ({
   page,

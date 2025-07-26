@@ -1,7 +1,6 @@
 import Image from "next/image"
-import { LocalizedLink } from "@/components/LocalizedLink"
-import { Input } from "@/components/Forms"
-import { SubmitButton } from "@modules/common/components/submit-button"
+import { LocalizedLink, Input } from "@/components/ThemeComponents"
+import { SubmitButton } from "@modules/ThemeModules"
 
 export default function RegisterLoadingPage() {
   return (

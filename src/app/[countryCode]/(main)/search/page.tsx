@@ -1,9 +1,7 @@
 import { Metadata } from "next"
-import { Layout, LayoutColumn } from "@/components/Layout"
+import { Layout, LayoutColumn } from "@/components/ThemeComponents"
 import { Suspense } from "react"
-import SkeletonProductGrid from "@modules/skeletons/templates/skeleton-product-grid"
-import PaginatedProducts from "@modules/store/templates/paginated-products"
-import { CollectionsSlider } from "@modules/store/components/collections-slider"
+import { SkeletonProductGrid, PaginatedProducts, CollectionsSlider } from "@modules/ThemeModules"
 import { MeiliSearchProductHit, searchClient } from "@lib/search-client"
 import { getRegion } from "@lib/data/regions"
 

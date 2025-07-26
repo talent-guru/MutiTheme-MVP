@@ -2,9 +2,7 @@ import { Metadata } from "next"
 import Image from "next/image"
 import { StoreRegion } from "@medusajs/types"
 import { listRegions } from "@lib/data/regions"
-import { Layout, LayoutColumn } from "@/components/Layout"
-import { LocalizedLink } from "@/components/LocalizedLink"
-import { CollectionsSection } from "@/components/CollectionsSection"
+import { Layout, LayoutColumn , LocalizedLink, CollectionsSection} from "@/components/ThemeComponents"
 
 export const metadata: Metadata = {
   title: "Inspiration",

@@ -1,5 +1,5 @@
 import { Metadata } from "next"
-import CartTemplate from "@modules/cart/templates"
+import { CartTemplate } from "@modules/ThemeModules"
 
 export const metadata: Metadata = {
   title: "Cart",

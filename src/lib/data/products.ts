@@ -1,8 +1,9 @@
 import { sdk } from "@lib/config"
 import { HttpTypes } from "@medusajs/types"
 import { getRegion } from "@lib/data/regions"
-import { SortOptions } from "@modules/store/components/refinement-list/sort-products"
 import { sortProducts } from "@lib/util/sort-products"
+
+export type SortOptions = "price_asc" | "price_desc" | "created_at"
 
 export const getProductsById = async function ({
   ids,

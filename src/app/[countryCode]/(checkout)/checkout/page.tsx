@@ -2,7 +2,7 @@ import React from "react"
 import { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { getCartId } from "@lib/data/cookies"
-import { CheckoutForm } from "@modules/checkout/components/checkout-form"
+import { CheckoutForm } from "@modules/ThemeModules"
 
 export const metadata: Metadata = {
   title: "Checkout",

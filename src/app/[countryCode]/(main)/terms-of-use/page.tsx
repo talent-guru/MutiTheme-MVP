@@ -1,7 +1,7 @@
 import { Metadata } from "next"
 import { StoreRegion } from "@medusajs/types"
 import { listRegions } from "@lib/data/regions"
-import { Layout, LayoutColumn } from "@/components/Layout"
+import { Layout, LayoutColumn } from "@/components/ThemeComponents"
 
 export const metadata: Metadata = {
   title: "Terms of Use",

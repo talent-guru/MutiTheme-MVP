@@ -1,0 +1,146 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.theme-classic {
+  --color-primary: #000000;
+  --color-bg: #ffffff;
+  --font-family: "Instrument Serif","Instrument Serif Fallback";
+}
+ 
+.theme-classic html {
+  @apply text-black font-normal;
+}
+
+.theme-classic h1,
+.theme-classic h2,
+.theme-classic h3,
+.theme-classic h4,
+.theme-classic h5,
+.theme-classic h6 {
+  @apply font-medium;
+}
+
+/* Chrome, Safari and Opera */
+.theme-classic .no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.theme-classic .no-scrollbar::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.theme-classic .no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.theme-classic .content-container {
+  @apply max-w-[1440px] w-full mx-auto px-6;
+}
+
+.theme-classic .contrast-btn {
+  @apply px-4 py-2 border border-black rounded-full hover:bg-black hover:text-white transition-colors duration-200 ease-in;
+}
+
+.theme-classic .text-xsmall-regular {
+  @apply text-[10px] leading-4 font-normal;
+}
+
+.theme-classic .text-small-regular {
+  @apply text-xs leading-5 font-normal;
+}
+
+.theme-classic .text-small-semi {
+  @apply text-xs leading-5 font-semibold;
+}
+
+.theme-classic .text-base-regular {
+  @apply text-sm leading-6 font-normal;
+}
+
+.theme-classic .text-base-semi {
+  @apply text-sm leading-6 font-semibold;
+}
+
+.theme-classic .text-large-regular {
+  @apply text-base leading-6 font-normal;
+}
+
+.theme-classic .text-large-semi {
+  @apply text-base leading-6 font-semibold;
+}
+
+.theme-classic .text-xl-regular {
+  @apply text-2xl leading-[36px] font-normal;
+}
+
+.theme-classic .text-xl-semi {
+  @apply text-2xl leading-[36px] font-semibold;
+}
+
+.theme-classic .text-2xl-regular {
+  @apply text-[30px] leading-[48px] font-normal;
+}
+
+.theme-classic .text-2xl-semi {
+  @apply text-[30px] leading-[48px] font-semibold;
+}
+
+.theme-classic .text-3xl-regular {
+  @apply text-[32px] leading-[44px] font-normal;
+}
+
+.theme-classic .text-3xl-semi {
+  @apply text-[32px] leading-[44px] font-semibold;
+}
+
+.theme-classic .article h1 {
+  @apply text-2xl;
+}
+
+.theme-classic .article h2,
+.theme-classic .article h3,
+.theme-classic .article h4,
+.theme-classic .article h5,
+.theme-classic .article h6 {
+  @apply text-md mt-16 mb-8;
+}
+
+.theme-classic .article p,
+.theme-classic .article ul {
+  @apply mb-4;
+}
+
+.theme-classic .article ul,
+.theme-classic .article ol {
+  @apply pl-5;
+}
+
+.theme-classic .article ul {
+  @apply list-disc;
+}
+
+.theme-classic .article ol {
+  @apply list-decimal;
+}
+
+.theme-classic .article ol ul {
+  @apply mt-4 pl-0;
+}
+
+.theme-classic .article ol > li {
+  @apply pl-1;
+}
+
+.theme-classic .article ol > li + li {
+  @apply mt-5;
+}
+
+.theme-classic .txt-medium {
+  @apply text-[1.875rem] leading-[1.3125rem] font-normal font-inter;
+}
+
+.theme-classic .txt-xlarge-plus {
+  @apply text-[1.125rem] leading-[1.6875rem] font-medium font-inter;
+}

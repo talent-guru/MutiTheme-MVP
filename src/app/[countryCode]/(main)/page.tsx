@@ -2,9 +2,8 @@ import { Metadata } from "next"
 import Image from "next/image"
 import { getRegion } from "@lib/data/regions"
 import { getProductTypesList } from "@lib/data/product-types"
-import { Layout, LayoutColumn } from "@/components/Layout"
-import { LocalizedLink } from "@/components/LocalizedLink"
-import { CollectionsSection } from "@/components/CollectionsSection"
+import { Layout, LayoutColumn, LocalizedLink, CollectionsSection } from "@/components/ThemeComponents"
+import { getCollectionsList } from "@lib/data/collections"
 
 export const metadata: Metadata = {
   title: "Medusa Next.js Starter Template",
@@ -67,6 +66,13 @@ export default async function Home({
     return null
   }
 
+  const collections = await getCollectionsList(0, 20, [
+    "id",
+    "title",
+    "handle",
+    "metadata",
+  ])
+  
   return (
     <>
       <div className="max-md:pt-18">
@@ -97,7 +103,7 @@ export default async function Home({
           </LayoutColumn>
         </Layout>
         <ProductTypesSection />
-        <CollectionsSection className="mb-22 md:mb-36" />
+        <CollectionsSection className="mb-22 md:mb-36" collections={collections.collections} />
         <Layout>
           <LayoutColumn className="col-span-full">
             <h3 className="text-md md:text-2xl mb-8 md:mb-16">

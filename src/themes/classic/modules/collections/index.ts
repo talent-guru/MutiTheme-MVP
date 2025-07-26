@@ -1,0 +1,1 @@
+export { default as CollectionTemplate } from "./templates/index" 

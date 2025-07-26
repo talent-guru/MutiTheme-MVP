@@ -5,11 +5,8 @@ import { HttpTypes } from "@medusajs/types"
 
 import { convertToLocale } from "@lib/util/money"
 import { retrieveOrder } from "@lib/data/orders"
-import { OrderTotals } from "@modules/order/components/OrderTotals"
-import { UiTag } from "@/components/ui/Tag"
-import { UiTagList, UiTagListDivider } from "@/components/ui/TagList"
-import { Icon } from "@/components/Icon"
-import { LocalizedLink } from "@/components/LocalizedLink"
+import { OrderTotals } from "@modules/ThemeModules"
+import { Icon, LocalizedLink, UiTag, UiTagList, UiTagListDivider } from "@/components/ThemeComponents"
 import { getCustomer } from "@lib/data/customer"
 import { redirect } from "next/navigation"
 

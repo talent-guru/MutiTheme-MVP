@@ -1,8 +1,8 @@
 import { Metadata } from "next"
 import { notFound } from "next/navigation"
 
-import { ChangePasswordForm } from "@modules/auth/components/ResetPasswordForm"
-import { Layout, LayoutColumn } from "@/components/Layout"
+import { ChangePasswordForm } from "@modules/ThemeModules"
+import { Layout, LayoutColumn } from "@/components/ThemeComponents"
 
 export const metadata: Metadata = {
   title: "Reset password",

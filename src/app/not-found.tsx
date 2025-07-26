@@ -1,18 +1,18 @@
 import { Metadata } from "next"
-import { Layout, LayoutColumn } from "@/components/Layout"
-import { LocalizedButtonLink } from "@/components/LocalizedLink"
-import { Footer } from "@/components/Footer"
-import { Header } from "@/components/Header"
+import { Layout, LayoutColumn, LocalizedButtonLink, Header, Footer } from "@/components/ThemeComponents"
+import { listRegions } from "@lib/data/regions"
 
 export const metadata: Metadata = {
   title: "404",
   description: "Something went wrong",
 }
 
-export default function NotFoundPage() {
+export default async function NotFoundPage() {
+
+  const regions = await listRegions()
   return (
     <>
-      <Header />
+      <Header regions={regions} />
       <Layout className="pt-30 pb-20 md:pt-47 md:pb-36">
         <LayoutColumn start={1} end={{ base: 13, lg: 7, xl: 8 }}>
           <h1 className="text-xl md:text-3xl max-lg:mb-8 text-black">

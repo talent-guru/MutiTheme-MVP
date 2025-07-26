@@ -1,4 +1,4 @@
-import SkeletonCartPage from "@modules/skeletons/templates/skeleton-cart-page"
+import { SkeletonCartPage } from "@modules/ThemeModules"
 
 export default function Loading() {
   return <SkeletonCartPage />

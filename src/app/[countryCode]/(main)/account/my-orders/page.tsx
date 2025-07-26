@@ -5,10 +5,8 @@ import { HttpTypes } from "@medusajs/types"
 import { twMerge } from "tailwind-merge"
 
 import { listOrders } from "@lib/data/orders"
-import { Pagination } from "@modules/store/components/pagination"
-import { ButtonLink } from "@/components/Button"
-import { UiTag } from "@/components/ui/Tag"
-import { LocalizedLink } from "@/components/LocalizedLink"
+import { Pagination } from "@modules/ThemeModules"
+import { ButtonLink, UiTag, LocalizedLink } from "@/components/ThemeComponents"
 import { getCustomer } from "@lib/data/customer"
 import { redirect } from "next/navigation"
 

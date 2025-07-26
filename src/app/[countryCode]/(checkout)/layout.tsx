@@ -1,17 +1,7 @@
 import * as React from "react"
-import { Layout, LayoutColumn } from "@/components/Layout"
-import { LocalizedLink } from "@/components/LocalizedLink"
-import dynamic from "next/dynamic"
+import { Layout, LayoutColumn, LocalizedLink } from "@/components/ThemeComponents"
+import { CheckoutSummaryWrapper, MobileCheckoutSummaryWrapper } from "@modules/ThemeModules"
 
-const CheckoutSummaryWrapper = dynamic(
-  () => import("@modules/checkout/components/checkout-summary-wrapper"),
-  { loading: () => <></> }
-)
-
-const  MobileCheckoutSummaryWrapper= dynamic(
-  () => import("@modules/checkout/components/mobile-checkout-summary-wrapper"),
-  { loading: () => <></> }
-)
 export default function CheckoutLayout({
   children,
 }: {

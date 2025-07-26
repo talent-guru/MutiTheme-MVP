@@ -1,6 +1,6 @@
 import { Metadata } from "next"
 import Image from "next/image"
-import { ForgotPasswordForm } from "@modules/auth/components/ForgotPasswordForm"
+import { ForgotPasswordForm } from "@modules/ThemeModules"
 
 export const metadata: Metadata = {
   title: "Forgot password",

@@ -1,16 +1,18 @@
 import { Metadata } from "next"
 import { getBaseURL } from "@lib/util/env"
-import { Header } from "@/components/Header"
-import { Footer } from "@/components/Footer"
+import { Header, Footer } from "@/components/ThemeComponents"
+import { listRegions } from "@lib/data/regions"
 
 export const metadata: Metadata = {
   metadataBase: new URL(getBaseURL()),
 }
 
 export default async function PageLayout(props: { children: React.ReactNode }) {
+
+  const regions = await listRegions()
   return (
     <>
-      <Header />
+      <Header regions={regions} />
       {props.children}
       <Footer />
     </>

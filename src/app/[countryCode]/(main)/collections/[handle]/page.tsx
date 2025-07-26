@@ -7,9 +7,10 @@ import {
 } from "@lib/data/collections"
 import { listRegions } from "@lib/data/regions"
 import { StoreCollection, StoreRegion } from "@medusajs/types"
-import CollectionTemplate from "@modules/collections/templates"
-import { SortOptions } from "@modules/store/components/refinement-list/sort-products"
+import { CollectionTemplate } from "@modules/ThemeModules"
 import { collectionMetadataCustomFieldsSchema } from "@lib/util/collections"
+
+export type SortOptions = "price_asc" | "price_desc" | "created_at"
 
 type Props = {
   params: Promise<{ handle: string; countryCode: string }>
