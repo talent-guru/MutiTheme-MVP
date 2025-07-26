@@ -8,7 +8,7 @@ export const UiSliderTrack: React.FC<ReactAria.SliderTrackProps> = ({
 }) => (
   <ReactAria.SliderTrack
     {...props}
-    className={twMerge("h-px bg-black", className as string)}
+    className={twMerge("h-px bg-primary", className as string)}
   />
 )
 

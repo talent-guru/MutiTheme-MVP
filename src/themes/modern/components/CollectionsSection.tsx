@@ -1,63 +1,48 @@
 import Image from "next/image"
-import { Carousel } from "./Carousel"
 import { LocalizedButtonLink, LocalizedLink } from "./LocalizedLink"
 
 export const CollectionsSection: React.FC<{ className?: string, collections: any[] }> = ({
   className,
   collections,
 }) => {
-
   if (!collections) {
     return null
   }
 
   return (
-    <Carousel
-      heading={<h3 className="text-md md:text-2xl">Collections</h3>}
-      button={
-        <>
-          <LocalizedButtonLink
-            href="/store"
-            size="md"
-            className="h-full flex-1 max-md:hidden md:h-auto"
+    <div className={className}>
+      <h1 className="text-primary font-bold tracking-wider mb-4 text-xl md:text-2xl">
+        Our Collections
+      </h1>
+      <div className="grid md:grid-cols-4 gap-1 grid-cols-2">
+        {collections.slice(0, 4).map((collection: any) => (
+          <div
+            className="relative bg-bg rounded-xl flex-shrink-0"
+            key={collection.id}
           >
-            View All
-          </LocalizedButtonLink>
-          <LocalizedButtonLink href="/store" size="sm" className="md:hidden">
-            View All
-          </LocalizedButtonLink>
-        </>
-      }
-      className={className}
-    >
-      {collections.map((collection: any) => (
-        <div
-          className="w-[70%] sm:w-[60%] lg:w-full max-w-124 flex-shrink-0"
-          key={collection.id}
-        >
-          <LocalizedLink href={`/collections/${collection.handle}`}>
-            {typeof collection.metadata?.image === "object" &&
-              collection.metadata.image &&
-              "url" in collection.metadata.image &&
-              typeof collection.metadata.image.url === "string" && (
-                <div className="relative mb-4 md:mb-10 w-full aspect-[3/4]">
-                  <Image
-                    src={collection.metadata.image.url}
-                    alt={collection.title}
-                    fill
-                  />
-                </div>
-              )}
-            <h3 className="md:text-lg mb-2 md:mb-4">{collection.title}</h3>
-            {typeof collection.metadata?.description === "string" &&
-              collection.metadata?.description.length > 0 && (
-                <p className="text-xs text-grayscale-500 md:text-md">
-                  {collection.metadata.description}
-                </p>
-              )}
-          </LocalizedLink>
-        </div>
-      ))}
-    </Carousel>
+            <LocalizedLink href={`/collections/${collection.handle}`} className="block">
+              {typeof collection.metadata?.image === "object" &&
+                collection.metadata.image &&
+                "url" in collection.metadata.image &&
+                typeof collection.metadata.image.url === "string" && (
+                  <div className="relative w-full">
+                    <Image
+                      src={collection.metadata.image.url}
+                      alt={collection.title}
+                      width={1200}
+                      height={900}
+                    />
+                  </div>
+                )}
+              <span
+                className="absolute left-1/2 -translate-x-1/2 bottom-8 md:bottom-12 px-8 py-2 bg-bg border border-primary text-primary rounded-full text-sm lg:text-md font-serif font-normal whitespace-nowrap shadow-md hover:bg-primary hover:text-white transition-all duration-300"
+              >
+                {collection.title}
+              </span>
+            </LocalizedLink>
+          </div>
+        ))}
+      </div>
+    </div>
   )
 }

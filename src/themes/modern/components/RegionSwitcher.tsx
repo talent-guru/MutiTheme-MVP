@@ -62,7 +62,7 @@ export const RegionSwitcher = withReactQueryProvider<{
           </UiSelectValue>
           <UiSelectIcon className={selectIconClassName} />
         </UiSelectButton>
-        <ReactAria.Popover placement="bottom right" className="max-w-61 w-full">
+        <ReactAria.Popover placement="bottom right" className="max-w-61 w-full bg-bg">
           <UiSelectListBox>
             {countryOptions.map((country) => (
               <UiSelectListBoxItem

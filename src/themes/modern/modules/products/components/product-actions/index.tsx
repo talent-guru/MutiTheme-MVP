@@ -228,7 +228,7 @@ function ProductActions({ product, materials, disabled }: ProductActionsProps) {
                         key={color.id}
                         value={color.name}
                         aria-label={color.name}
-                        className="h-8 w-8 cursor-pointer relative before:transition-colors before:absolute before:content-[''] before:-bottom-2 before:left-0 before:w-full before:h-px data-[selected]:before:bg-black shadow-sm hover:shadow"
+                        className="h-8 w-8 cursor-pointer relative before:transition-colors before:absolute before:content-[''] before:-bottom-2 before:left-0 before:w-full before:h-px data-[selected]:before:bg-primary shadow-sm hover:shadow"
                         style={{ background: color.hex_code }}
                       />
                     ))}

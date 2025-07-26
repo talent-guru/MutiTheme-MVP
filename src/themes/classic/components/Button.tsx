@@ -35,7 +35,7 @@ export const getButtonClassNames = ({
     outline:
       "text-black hover:text-grayscale-500 hover:border-grayscale-500 border border-black disabled:text-grayscale-200 disabled:border-grayscale-200",
     solid:
-      "bg-black hover:bg-grayscale-500 text-white disabled:bg-grayscale-200",
+      "bg-primary hover:bg-grayscale-500 text-white disabled:bg-grayscale-200",
     link: "text-black h-auto border-b border-current px-0 rounded-none disabled:text-grayscale-200 hover:border-transparent",
   }
 

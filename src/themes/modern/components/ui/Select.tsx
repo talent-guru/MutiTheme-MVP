@@ -50,7 +50,7 @@ export const UiSelectListBox = <T extends object>({
   <ReactAria.ListBox
     {...props}
     className={twMerge(
-      "border border-grayscale-200 bg-white rounded-xs focus-visible:outline-none max-h-50 overflow-scroll",
+      "border text-primary hover:text-[#ffa391] border-grayscale-200 bg-bg rounded-xs focus-visible:outline-none max-h-50 overflow-scroll",
       className as string
     )}
   />
@@ -63,7 +63,7 @@ export const UiSelectListBoxItem: React.FC<ReactAria.ListBoxItemProps> = ({
   <ReactAria.ListBoxItem
     {...props}
     className={twMerge(
-      "cursor-pointer p-4 focus-visible:outline-none data-[selected]:font-semibold hover:bg-grayscale-50 transition-colors",
+      "cursor-pointer p-4 focus-visible:outline-none data-[selected]:font-semibold hover:text-primary transition-colors",
       className as string
     )}
   />

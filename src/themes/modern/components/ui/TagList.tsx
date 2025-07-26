@@ -13,5 +13,5 @@ export const UiTagList: React.FC<React.ComponentPropsWithoutRef<"ul">> = ({
 export const UiTagListDivider: React.FC<
   React.ComponentPropsWithoutRef<"span">
 > = ({ className, ...rest }) => (
-  <span {...rest} className={twMerge("w-6 h-px bg-black", className)} />
+  <span {...rest} className={twMerge("w-6 h-px bg-primary", className)} />
 )

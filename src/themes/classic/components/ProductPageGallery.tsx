@@ -66,7 +66,7 @@ export const ProductPageGallery: React.FC<
         >
           <IconCircle
             className={twJoin(
-              "bg-black text-white transition-colors",
+              "bg-primary text-white transition-colors",
               prevBtnDisabled && "bg-transparent text-black"
             )}
           >
@@ -93,7 +93,7 @@ export const ProductPageGallery: React.FC<
         >
           <IconCircle
             className={twJoin(
-              "bg-black text-white transition-colors",
+              "bg-primary text-white transition-colors",
               nextBtnDisabled && "bg-transparent text-black"
             )}
           >

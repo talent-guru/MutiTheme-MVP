@@ -31,13 +31,13 @@ export const Header: React.FC<{ regions: any[] }> = ({ regions }) => {
           <LayoutColumn>
             <div className="flex justify-between items-center h-18 md:h-21">
               <div className="flex items-center gap-8">
-                <h1 className="font-medium text-xl text-primary">
+                <h1 className="font-medium text-xl font-bold text-primary">
                   <LocalizedLink href="/">SofaSociety.</LocalizedLink>
                 </h1>
-                <div className="flex items-center gap-8 max-md:hidden">
-                  <LocalizedLink href="/about">About</LocalizedLink>
-                  <LocalizedLink href="/inspiration">Inspiration</LocalizedLink>
-                  <LocalizedLink href="/store">Shop</LocalizedLink>
+                <div className="flex items-center gap-8 max-md:hidden hover:text-[#ffa391]">
+                  <LocalizedLink href="/about" className="hover:text-primary">About</LocalizedLink>
+                  <LocalizedLink href="/inspiration" className="hover:text-primary">Inspiration</LocalizedLink>
+                  <LocalizedLink href="/store" className="hover:text-primary">Shop</LocalizedLink>
                 </div>
               </div>
               <div className="flex items-center gap-3 lg:gap-6 max-md:hidden">

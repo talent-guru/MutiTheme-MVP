@@ -7,87 +7,31 @@ import { useCountryCode } from "hooks/country-code"
 export const HeaderWrapper: React.FC<{ children?: React.ReactNode }> = ({
   children,
 }) => {
-  const pathName = usePathname()
-  const countryCode = useCountryCode()
-  const currentPath = countryCode
-    ? pathName.split(`/${countryCode}`)[1]
-    : pathName
-  const isPageWithHeroImage =
-    !currentPath ||
-    currentPath === "/" ||
-    currentPath === "/about" ||
-    currentPath === "/inspiration" ||
-    currentPath.startsWith("/collections")
-  const isAlwaysSticky =
-    currentPath.startsWith("/auth") || currentPath.startsWith("/account")
+  const [isSticky, setIsSticky] = React.useState(false);
 
   React.useEffect(() => {
-    if (isAlwaysSticky) {
-      return
-    }
-
-    const headerElement = document.querySelector("#site-header")
-
-    if (!headerElement) {
-      return
-    }
-
-    const nextElement = headerElement.nextElementSibling
-    let triggerPosition = 0
-
-    const updateTriggerPosition = () => {
-      if (isPageWithHeroImage) {
-        triggerPosition = nextElement
-          ? Math.max(nextElement.clientHeight - headerElement.clientHeight, 1)
-          : 200
-      } else {
-        triggerPosition = nextElement
-          ? Math.max(
-              Number.parseInt(
-                window.getComputedStyle(nextElement).paddingTop,
-                10
-              ) - headerElement.clientHeight,
-              1
-            )
-          : 1
-      }
-    }
-
     const handleScroll = () => {
-      const position = window.scrollY
+      const scrollTop = window.scrollY;
+      setIsSticky(scrollTop > 0);
+    };
 
-      headerElement.setAttribute(
-        "data-sticky",
-        position > triggerPosition ? "true" : "false"
-      )
-    }
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+    
+    // Initial check
+    handleScroll();
 
-    updateTriggerPosition()
-    handleScroll()
-
-    window.addEventListener("resize", updateTriggerPosition, {
-      passive: true,
-    })
-    window.addEventListener("orientationchange", updateTriggerPosition, {
-      passive: true,
-    })
-    window.addEventListener("scroll", handleScroll, {
-      passive: true,
-    })
-
+    // Cleanup
     return () => {
-      window.removeEventListener("resize", updateTriggerPosition)
-      window.removeEventListener("orientationchange", updateTriggerPosition)
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [pathName, isPageWithHeroImage, isAlwaysSticky])
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <div
       id="site-header"
-      className="top-0 left-0 w-full max-md:bg-grayscale-50 data-[light=true]:md:text-white data-[sticky=true]:md:bg-white data-[sticky=true]:md:text-black transition-colors fixed z-40 group"
-      data-light={isPageWithHeroImage}
-      data-sticky={isAlwaysSticky}
+      className="top-0 left-0 w-full bg-bg data-[sticky=true]:md:border-b-2 border-primary sticky z-40 transition-all duration-200"
+      data-sticky={isSticky}
     >
       {children}
     </div>

@@ -4,22 +4,28 @@
 
 .theme-modern {
   --color-primary: #FF5227;
-  --color-bg: #ff52273c;
+  --color-bg: #fff6e6;
   --font-family: "Instrument Serif","Instrument Serif Fallback";
 }
- 
+
 .theme-modern html {
   @apply text-black font-normal;
 }
 
-.theme-modern h1,
-.theme-modern h2,
-.theme-modern h3,
-.theme-modern h4,
-.theme-modern h5,
-.theme-modern h6 {
-  @apply font-medium;
+.theme-modern body {
+  color: #FF5227;
 }
+
+/* Override all text colors in modern theme */
+.theme-modern * {
+  color: inherit;
+}
+
+.theme-modern main {
+  background-color: #fff6e6;
+  color: #FF5227;
+} 
+
 
 /* Chrome, Safari and Opera */
 .theme-modern .no-scrollbar::-webkit-scrollbar {
@@ -35,40 +41,73 @@
   scrollbar-width: none; /* Firefox */
 }
 
+/* Custom scrollbar for modern theme */
+.theme-modern ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.theme-modern ::-webkit-scrollbar-track {
+  background: #ff52273c;
+  border-radius: 4px;
+}
+
+.theme-modern ::-webkit-scrollbar-thumb {
+  background: #ffa391;
+  border-radius: 4px;
+}
+
+.theme-modern ::-webkit-scrollbar-thumb:hover {
+  background: #ffa391;
+}
+
+/* Firefox scrollbar */
+.theme-modern {
+  scrollbar-width: thin;
+  scrollbar-color: #ffa391 #ff52273c;
+}
+
 .theme-modern .content-container {
   @apply max-w-[1440px] w-full mx-auto px-6;
 }
 
 .theme-modern .contrast-btn {
-  @apply px-4 py-2 border border-black rounded-full hover:bg-black hover:text-white transition-colors duration-200 ease-in;
+  @apply px-4 py-2 border border-black rounded-full hover:bg-primary hover:text-white transition-colors duration-200 ease-in;
 }
 
 .theme-modern .text-xsmall-regular {
   @apply text-[10px] leading-4 font-normal;
+  color: #FF5227;
 }
 
 .theme-modern .text-small-regular {
   @apply text-xs leading-5 font-normal;
+  color: #FF5227;
 }
 
 .theme-modern .text-small-semi {
   @apply text-xs leading-5 font-semibold;
+  color: #FF5227;
 }
 
 .theme-modern .text-base-regular {
   @apply text-sm leading-6 font-normal;
+  color: #FF5227;
 }
 
 .theme-modern .text-base-semi {
   @apply text-sm leading-6 font-semibold;
+  color: #FF5227;
 }
 
 .theme-modern .text-large-regular {
   @apply text-base leading-6 font-normal;
+  color: #FF5227;
 }
 
 .theme-modern .text-large-semi {
   @apply text-base leading-6 font-semibold;
+  color: #FF5227;
 }
 
 .theme-modern .text-xl-regular {
@@ -98,6 +137,19 @@
 .theme-modern .article h1 {
   @apply text-2xl;
 }
+
+.theme-modern svg path {
+  fill: #FF5227;
+}
+
+.theme-modern .white path {
+  fill: #fff;
+}
+
+.theme-modern * {
+  font-family: serif;
+}
+
 
 .theme-modern .article h2,
 .theme-modern .article h3,

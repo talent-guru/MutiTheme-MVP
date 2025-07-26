@@ -12,7 +12,7 @@ export const UiModalOverlay: React.FC<ReactAria.ModalOverlayProps> = ({
     {...props}
     isDismissable={isDismissable}
     className={twMerge(
-      "fixed inset-0 flex min-h-full items-center justify-center bg-black-10% z-50 data-[entering]:animate-in data-[entering]:fade-in data-[entering]:duration-200 data-[entering]:ease-out data-[exiting]:animate-out data-[exiting]:fade-out data-[exiting]:duration-100 data-[exiting]:ease-in p-4",
+      "fixed inset-0 flex min-h-full items-center justify-center bg-primary-10% z-50 data-[entering]:animate-in data-[entering]:fade-in data-[entering]:duration-200 data-[entering]:ease-out data-[exiting]:animate-out data-[exiting]:fade-out data-[exiting]:duration-100 data-[exiting]:ease-in p-4",
       className as string
     )}
   />
