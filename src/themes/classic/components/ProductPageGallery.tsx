@@ -111,7 +111,7 @@ export const ProductPageGallery: React.FC<
             <span
               className={twMerge(
                 "border-b border-transparent transition-colors px-0.5",
-                index === selectedIndex && "border-black"
+                index === selectedIndex && "border-primary"
               )}
             >
               {index + 1}

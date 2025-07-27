@@ -8,21 +8,21 @@ const newsletterFormSchema = z.object({
   email: z.string().min(3).email(),
 })
 
-export const NewsletterForm: React.FC<{ className?: string }> = ({
-  className,
-}) => {
+export const NewsletterForm: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = React.useState(false)
 
   return (
-    <div className={className}>
-      <h2 className="text-md md:text-lg mb-2 md:mb-1">Join our newsletter</h2>
+    <div className="mb-8">
+      <h2 className="md:text-[84px] text-[56px]">
+        Subscribe to get 10% off.
+      </h2>
       {isSubmitted ? (
-        <p className="max-md:text-xs">
+        <p className="max-md:text-xl text-xl">
           Thank you for subscribing to our newsletter!
         </p>
       ) : (
         <>
-          <p className="max-md:text-xs mb-4">
+          <p className="max-md:text-xl text-xl mb-4">
             We will also send you our discount coupons!
           </p>
           <Form
@@ -34,21 +34,21 @@ export const NewsletterForm: React.FC<{ className?: string }> = ({
             <div className="flex gap-2">
               <InputField
                 inputProps={{
-                  uiSize: "sm",
+                  uiSize: "lg",
                   className: "rounded-xs",
                   autoComplete: "email",
                 }}
                 name="email"
                 type="email"
                 placeholder="Your email"
-                className="mb-4 flex-1"
+                className="mb-4 flex-1 md:text-xl"
               />
-              <Button type="submit" size="sm" className="h-9 text-xs">
+              <Button type="submit" size="lg" className="h-14 text-md">
                 Subscribe
               </Button>
             </div>
           </Form>
-          <p className="text-xs text-grayscale-500">
+          <p className="md:text-md text-sm">
             By subscribing you agree to with our{" "}
             <LocalizedLink
               href="/privacy-policy"

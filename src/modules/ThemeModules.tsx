@@ -46,6 +46,7 @@ export const MobileCheckoutSummaryWrapper = () => require("../theme.config").THE
 export const Ideal = () => require("../theme.config").THEME.modules.common.Ideal;
 export const Bancontact = () => require("../theme.config").THEME.modules.common.Bancontact;
 export const PayPal = () => require("../theme.config").THEME.modules.common.PayPal;
+export const LoginLink = () => require("../theme.config").THEME.modules.header.LoginLink;
 
 export const StoreTemplate = (props: any) => {
   const StoreTemplate = THEME.modules.store.StoreTemplate;

@@ -134,7 +134,7 @@ export const SearchField: React.FC<{
             isInputShown ? "w-full md:w-30" : "md:w-0"
           )}
         >
-          <Input className="px-0 disabled:bg-transparent !py-0 h-7 md:h-6 max-md:border-0 border-black rounded-none border-t-0 border-x-0 group-data-[light=true]:md:border-white group-data-[sticky=true]:md:border-black ml-2 md:ml-1" />
+          <Input className="px-0 disabled:bg-transparent !py-0 h-7 md:h-6 max-md:border-0 border-primary rounded-none border-t-0 border-x-0 group-data-[light=true]:md:border-white group-data-[sticky=true]:md:border-primary ml-2 md:ml-1" />
         </div>
         <ReactAria.Popover
           placement="bottom end"

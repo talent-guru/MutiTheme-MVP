@@ -19,7 +19,7 @@ export const UiSliderThumb: React.FC<ReactAria.SliderThumbProps> = ({
   <ReactAria.SliderThumb
     {...props}
     className={twMerge(
-      "w-4 h-4 border border-black bg-white rounded-full cursor-pointer",
+      "w-4 h-4 border border-primary bg-white rounded-full cursor-pointer",
       className as string
     )}
   />

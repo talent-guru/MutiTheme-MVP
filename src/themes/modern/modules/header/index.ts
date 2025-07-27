@@ -1,1 +1,1 @@
-export * from "./components/LoginLink" 
+export { default as LoginLink } from "./components/LoginLink" 

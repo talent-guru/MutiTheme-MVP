@@ -149,8 +149,8 @@ export default async function Home({
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
                   <div className="border p-8 border-primary/30 rounded-md h-full">
                     <h2 className="text-primary font-bold uppercase tracking-wider mb-4 text-sm md:text-base">
-                        About Sofa Society
-                      </h2>
+                      About Sofa Society
+                    </h2>
                     <div className="md:text-md">
                       <p className="mb-5 md:mb-9">
                         We are dedicated to delivering high-quality, thoughtfully

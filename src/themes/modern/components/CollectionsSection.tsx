@@ -35,7 +35,7 @@ export const CollectionsSection: React.FC<{ className?: string, collections: any
                   </div>
                 )}
               <span
-                className="absolute left-1/2 -translate-x-1/2 bottom-8 md:bottom-12 px-8 py-2 bg-bg border border-primary text-primary rounded-full text-sm lg:text-md font-serif font-normal whitespace-nowrap shadow-md hover:bg-primary hover:text-white transition-all duration-300"
+                className="absolute left-1/2 -translate-x-1/2 bottom-8 md:bottom-12 md:px-6 px-3 py-2 bg-bg border border-primary text-primary rounded-full text-xs md:text-sm lg:text-md font-serif font-normal whitespace-nowrap shadow-md hover:bg-primary hover:text-white transition-all duration-300"
               >
                 {collection.title}
               </span>

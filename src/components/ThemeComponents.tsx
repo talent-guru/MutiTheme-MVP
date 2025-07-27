@@ -37,3 +37,5 @@ export const CartIcon = THEME.components.CartIcon;
 export const CollectionsSection = THEME.components.CollectionsSection;
 export const Drawer = THEME.components.Drawer;
 export const Header = THEME.components.Header;
+export const AboutSections = THEME.components.AboutSections;
+export const RightIcons = THEME.components.RightIcons;
