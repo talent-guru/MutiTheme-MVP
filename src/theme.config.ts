@@ -1,22 +1,11 @@
-import * as ModernComponents from './themes/modern/components';
-import * as ModernModules from './themes/modern/modules';
+export const ACTIVE_THEME = process.env.NEXT_PUBLIC_THEME || "modern";
 
-import * as ClassicComponents from './themes/classic/components';
-import * as ClassicModules from './themes/classic/modules';
+let themeData: any;
 
-
-export const THEMES = {
-  modern: {
-    name: "Modern",
-    components: ModernComponents,
-    modules: ModernModules,
-  },
-  classic: {
-    name: "Classic",
-    components: ClassicComponents,
-    modules: ClassicModules,
-  }
+themeData = {
+  name: "Modern",
+  components: require(`./themes/${ACTIVE_THEME}/components`),
+  modules: require(`./themes/${ACTIVE_THEME}/modules`),
 };
 
-export const ACTIVE_THEME = process.env.NEXT_PUBLIC_THEME || "modern";
-export const THEME = THEMES[ACTIVE_THEME as keyof typeof THEMES];
+export const THEME = themeData;

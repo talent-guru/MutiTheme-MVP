@@ -1,16 +1,5 @@
 import * as React from "react"
-import dynamic from "next/dynamic"
 import { Layout, LayoutColumn, LocalizedLink, SearchField, HeaderDrawer, RegionSwitcher, HeaderWrapper } from "./index"
-
-const LoginLink = dynamic(
-  () => import("../modules/header/components/LoginLink"),
-  { loading: () => <></> }
-)
-
-const CartDrawer = dynamic(
-  () => import("./CartDrawer").then((mod) => mod.CartDrawer),
-  { loading: () => <></> }
-)
 
 export const Header: React.FC<{ regions: any[] }> = ({ regions }) => {
   const countryOptions = regions
